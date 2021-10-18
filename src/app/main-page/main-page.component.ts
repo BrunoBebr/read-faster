@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import type { Container, Main } from 'tsparticles';
 
 @Component({
   selector: 'app-main-page',
@@ -6,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+    ngOnInit(){}
+    constructor() { }
 }

@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router, RouterModule, Routes } from '@angular/router';
-import { DialogNextLevelComponent } from '../dialog-next-level/dialog-next-level.component';
-
-
+import { DialogNextLevelComponent } from '../../dialog-next-level/dialog-next-level.component';
 
 @Component({
-  selector: 'app-training',
-  templateUrl: './training.component.html',
-  styleUrls: ['./training.component.scss']
+  selector: 'app-level-two',
+  templateUrl: './level-two.component.html',
+  styleUrls: ['./level-two.component.scss']
 })
-export class TrainingComponent implements OnInit {
+export class LevelTwoComponent implements OnInit {
 
   start = true;
   verify = false;
@@ -42,11 +40,11 @@ getRandomInt(min: number, max: number) {
   text!.innerText = "";
   this.number = this.getRandomInt(100 ,999)
   this.delay(1000).then(any=>{
-    console.log(this.number);
+    //console.log(this.number);
     var text = document.getElementById('number-span');
     text!.innerText = "" + this.number;
-    this.delay(100).then(any=>{
-      console.log("hide");
+    this.delay(70).then(any=>{
+      //console.log("hide");
       var text = document.getElementById('number-span');
       text!.innerText = "";
       
@@ -65,14 +63,14 @@ getRandomInt(min: number, max: number) {
     this.isVisible = false;
     this.verify = false;
 
-    console.log("User input =>" + this.inputNum);
-    console.log("Correct number =>" + this.number);
+    //console.log("User input =>" + this.inputNum);
+    //console.log("Correct number =>" + this.number);
 
     if(this.inputNum == this.number){
       var text = document.getElementById('number-span');
       text!.innerText = "Keep it up! 😱";
       this.answerStreak = this.answerStreak + 10;
-      console.log(this.answerStreak);
+     // console.log(this.answerStreak);
     }
     if(this.inputNum != this.number){
       var text = document.getElementById('number-span');
@@ -89,7 +87,7 @@ getRandomInt(min: number, max: number) {
 
       dialogRef.afterClosed().subscribe(result => {
         if (result == true) {
-          this.router.navigate(['practice/classic/level-2']);
+          this.router.navigate(['practice/classic/level-3']);
         }
         else{ 
           this.answerStreak = 0; 

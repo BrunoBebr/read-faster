@@ -4,8 +4,8 @@
       <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>RF v0.0</span>
-      <span class="example-spacer"></span>
+      <a routerLink=""><span id="header">Read faster !</span></a>
+      <span  class="example-spacer"></span>
       
       <button mat-icon-button class="example-icon" >
         <mat-icon>share</mat-icon>
@@ -14,9 +14,17 @@
     <mat-drawer #drawer class="sidenav" mode="side" >
        
         <mat-list >
-            <a mat-list-item routerLink="training">training</a>
-            <a mat-list-item routerLink="">Item 2</a>
-            <a mat-list-item routerLink="">Item 3</a>
+            <a mat-list-item routerLink="">Main page</a>
+            <a mat-list-item routerLink="practice/classic/level-1">Level 1</a>
+            <a mat-list-item routerLink="practice/classic/level-2">Level 2</a>
+            <a mat-list-item routerLink="practice/classic/level-3">Level 3</a>
+            <a mat-list-item routerLink="practice/classic/level-4">Level 4</a>
+            <a mat-list-item routerLink="practice/classic/level-5">Level 5</a>
+            <a mat-list-item routerLink="practice/classic/level-6">Level 6</a>
+            <a mat-list-item routerLink="practice/classic/level-7">Level 7</a>
+            <a mat-list-item routerLink="practice/classic/level-8">Level 8</a>
+            <a mat-list-item routerLink="practice/classic/level-9">Level 9</a>
+            <a mat-list-item routerLink="practice/classic/level-10">Level 10</a>
           </mat-list>
        
       </mat-drawer>
