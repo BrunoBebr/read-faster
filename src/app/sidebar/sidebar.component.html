@@ -1,0 +1,26 @@
+<mat-drawer-container class="sidenav-container" autosize >
+
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>RF v0.0</span>
+      <span class="example-spacer"></span>
+      
+      <button mat-icon-button class="example-icon" >
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-drawer #drawer class="sidenav" mode="side" >
+       
+        <mat-list >
+            <a mat-list-item routerLink="training">training</a>
+            <a mat-list-item routerLink="">Item 2</a>
+            <a mat-list-item routerLink="">Item 3</a>
+          </mat-list>
+       
+      </mat-drawer>
+    
+     <div class="content"></div> 
+    <router-outlet></router-outlet>
+  </mat-drawer-container>
