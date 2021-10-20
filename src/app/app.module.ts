@@ -29,6 +29,7 @@ import { LevelEightComponent } from './classic_levels/level-eight/level-eight.co
 import { LevelNineComponent } from './classic_levels/level-nine/level-nine.component';
 import { LevelTenComponent } from './classic_levels/level-ten/level-ten.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

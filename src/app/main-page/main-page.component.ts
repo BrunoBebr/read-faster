@@ -7,6 +7,13 @@ import type { Container, Main } from 'tsparticles';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-    ngOnInit(){}
-    constructor() { }
+  
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
+
+  
 }

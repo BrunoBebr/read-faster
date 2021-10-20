@@ -1,1 +1,12 @@
-ahoj
+<section id="section04" class="demo">
+    <h1>Welcome !</h1>
+    <a href="#section05"><span></span>Scroll</a>
+  </section>
+
+  <script>
+  $(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });</script>
