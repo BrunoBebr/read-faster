@@ -18,7 +18,7 @@ export class LevelOneComponent implements OnInit {
   isVisible = false;
   number : number | undefined;
   inputNum: any;
-  public answerStreak = 100;
+  public answerStreak = 0;
 
   constructor(public dialog: MatDialog, private router: Router, private route: ActivatedRoute) { }
 
