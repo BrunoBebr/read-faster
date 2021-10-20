@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LevelOneComponent } from './classic_levels/level-one/level-one.component';
 
-import { MainPageComponent } from './main-page/main-page.component';
+import { MainPageComponent } from './main-page/main-page-layout/main-page.component';
 import { TrainingComponent } from './training/training.component';
 
 const routes: Routes = [

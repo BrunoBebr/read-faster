@@ -10,7 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-import { MainPageComponent } from './main-page/main-page.component';
+import { MainPageComponent } from './main-page/main-page-layout/main-page.component';
 import { TrainingComponent } from './training/training.component';
 import { FormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -20,6 +20,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { LevelOneComponent } from './classic_levels/level-one/level-one.component';
 import { DialogNextLevelComponent } from './dialog-next-level/dialog-next-level.component';
 import { NgParticlesModule } from 'ng-particles';
+import { SelectionWelcomeComponent } from './main-page/selection-welcome/selection-welcome.component';
+import { SelectionModesComponent } from './main-page/selection-modes/selection-modes.component';
 
 
 
@@ -31,6 +33,8 @@ import { NgParticlesModule } from 'ng-particles';
     TrainingComponent,
     LevelOneComponent,
     DialogNextLevelComponent,
+    SelectionWelcomeComponent,
+    SelectionModesComponent,
    
   ],
   imports: [
