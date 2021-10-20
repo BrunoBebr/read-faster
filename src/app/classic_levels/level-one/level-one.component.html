@@ -5,7 +5,7 @@
     
     <mat-grid-tile>
         <div>
-        <p class="text-center"><span id="number-span">Ready for level 1 ?</span><br><br><span id="count"></span></p>
+        <p class="text-center"><span id="number-span"></span><br><br><span id="count"></span></p>
         
         <div class="form">
             <form *ngIf="isVisible" (submit)="verifynum()" id="numberInputForm">
@@ -16,7 +16,7 @@
         
          
         <div class="buttons">     
-        <button *ngIf="start" mat-flat-button id="start-button" (click)="course()" >Start</button>
+        <button *ngIf="start" mat-flat-button id="start-button" (click)="startCourse()" >Start</button>
         <button *ngIf="verify"  form="numberInputForm" mat-flat-button id="end-button" (click)="verifynum()" >Verify</button>
     </div></div>
 
