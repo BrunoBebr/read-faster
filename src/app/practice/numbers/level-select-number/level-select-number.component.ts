@@ -76,7 +76,7 @@ displayedColumns: string[] = ['id', 'time', 'digits'];
   });
 
   startCustomLevel(){
-    console.log(this.customLevel.value)
-    this.router.navigate(['practice/numbers/custom-level/10/5/11']);
+    //console.log(this.customLevel.value.time)
+    this.router.navigate(['practice/numbers/custom-level/' + this.customLevel.value.time +'/'+ this.customLevel.value.minNumber + '/' + this.customLevel.value.maxNumber]);
   }
 }
