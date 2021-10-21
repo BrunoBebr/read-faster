@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+
 * {
     color: white;
+    //font-family: 'Josefin Sans', sans-serif;
 }
 .gradient-background {
     width: 100%;
@@ -32,6 +36,8 @@ input {
 
 button {
     color: black;
+   // font-weight: bold;
+    
 }
 
 input::-webkit-outer-spin-button,
@@ -63,4 +69,12 @@ mat-progress-bar{
 
 ::ng-deep .mat-progress-bar {
     border-radius: 2px;
+}
+#back-arrow {
+    color: rgba(255, 255, 255, 0.555);
+    position: relative;
+    top: 1%;
+    left: 1%;
+    cursor: pointer;
+    text-decoration: none;
 }
