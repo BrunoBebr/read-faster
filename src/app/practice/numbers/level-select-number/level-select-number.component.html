@@ -97,22 +97,24 @@
         <div id="rounded-background">
           <br>
           <div class="center">
-          <form class="custom-level-form">
+          <form [formGroup]="customLevel" class="custom-level-form" (ngSubmit)="startCustomLevel()">
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Time</mat-label>
-              <input matInput  type="number" value="100"><span style="margin-left:-35px;">ms</span>
+              <input matInput  type="number" required  formControlName="time"><span style="margin-left:-35px;">ms</span>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Min. number</mat-label>
-              <input matInput  type="number" value="1000"><span style="margin-left:-35px;"></span>
+              <input matInput  type="number" required formControlName="minNumber"><span style="margin-left:-35px;"></span>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Max. number</mat-label>
-              <input matInput  type="number" value="9999"><span style="margin-left:-35px;"></span>
+              <input matInput  type="number" required  formControlName="maxNumber"><span style="margin-left:-35px;"></span>
             </mat-form-field>
-            
+              <br>
+            <button class="button" type="submit" mat-raised-button color="primary" [disabled]="!customLevel.valid">Start</button>
+           
             </form>
             </div>
         </div>

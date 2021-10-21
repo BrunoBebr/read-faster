@@ -6,6 +6,9 @@ import {MatSort, Sort} from '@angular/material/sort';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
 import { ActivatedRoute } from '@angular/router';
 import { Params, Router, RouterModule, Routes } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 export interface numberLevelsDefinition {
   id: number;
@@ -63,5 +66,17 @@ displayedColumns: string[] = ['id', 'time', 'digits'];
   }
   clickedRows(level :number){
     this.router.navigate(['practice/numbers/classic/level',level]);
+  }
+
+
+  customLevel = new FormGroup({
+    time: new FormControl(null, Validators.required),
+    minNumber: new FormControl(null, Validators.required),
+    maxNumber: new FormControl(null, Validators.required)
+  });
+
+  startCustomLevel(){
+    console.log(this.customLevel.value)
+    this.router.navigate(['practice/numbers/custom-level/10/5/11']);
   }
 }

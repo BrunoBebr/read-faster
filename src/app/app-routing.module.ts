@@ -6,7 +6,7 @@ import { ClassicLevelNumbersComponent } from './practice/numbers/classic-level-n
 import { LevelSelectNumberComponent } from './practice/numbers/level-select-number/level-select-number.component';
 import { MainPageComponent } from './main-page/main-page-layout/main-page.component';
 import { TrainingComponent } from './training/training.component';
-
+import { CustomLevelNumbersComponent } from './practice/numbers/custom-level-numbers/custom-level-numbers.component';
 
 
 const routes: Routes = [
@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: "training", component: TrainingComponent},
   {path: "practice/numbers/classic/level/:id", component: ClassicLevelNumbersComponent},
   {path: "practice/numbers/select-level", component: LevelSelectNumberComponent},
-
+  {path: "practice/numbers/custom-level/:time/:min_num/:max_num", component: CustomLevelNumbersComponent},
 ];
 
 

@@ -26,8 +26,10 @@ import { LevelSelectNumberComponent } from './practice/numbers/level-select-numb
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
-import {MatInputModule} from '@angular/material/input';
-
+import {MatInputModule} from '@angular/material/input'
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CustomLevelNumbersComponent } from './practice/numbers/custom-level-numbers/custom-level-numbers.component';
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import {MatInputModule} from '@angular/material/input';
     SectionModesComponent,
     ClassicLevelNumbersComponent,
     LevelSelectNumberComponent,
+    CustomLevelNumbersComponent,
     
    
   ],
@@ -62,7 +65,10 @@ import {MatInputModule} from '@angular/material/input';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatInputModule
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
