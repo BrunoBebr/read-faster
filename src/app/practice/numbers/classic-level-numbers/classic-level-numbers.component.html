@@ -1,0 +1,29 @@
+<div class="gradient-background">
+<mat-progress-bar mode="determinate"  [value]="answerStreak"></mat-progress-bar>
+
+
+<mat-grid-list cols="1" rowHeight="2:1">
+    
+    <mat-grid-tile>
+        <div>
+        <p class="text-center"><span id="number-span"></span><br><br><span id="count"></span></p>
+        
+        <div class="form">
+            <form *ngIf="isVisible" (submit)="verifynum()" id="numberInputForm">
+                <input id="inp"type="number" [(ngModel)]="inputNum" name="number">
+                <p><br></p>
+            </form>
+        </div>
+        
+         
+        <div class="buttons">     
+        <button *ngIf="start" mat-flat-button id="start-button" (click)="startCourse()" >Start</button>
+        <button *ngIf="verify"  form="numberInputForm" mat-flat-button id="end-button" (click)="verifynum()" >Verify</button>
+    </div></div>
+
+    </mat-grid-tile>
+    
+   
+   
+  </mat-grid-list>
+</div>
