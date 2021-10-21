@@ -13,5 +13,10 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onActivate() {
+    window.scroll(0,0);
+    document.body.scrollTop = 0;
+    //document.querySelector('body').scrollTo(0,0)
+    
+}
 }

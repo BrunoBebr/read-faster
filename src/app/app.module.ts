@@ -17,11 +17,15 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
-import { LevelOneComponent } from './classic_levels/level-one/level-one.component';
 import { DialogNextLevelComponent } from './dialog-next-level/dialog-next-level.component';
 import { NgParticlesModule } from 'ng-particles';
-import { SelectionWelcomeComponent } from './main-page/selection-welcome/selection-welcome.component';
-import { SelectionModesComponent } from './main-page/selection-modes/selection-modes.component';
+import { SectionWelcomeComponent } from './main-page/section-welcome/section-welcome.component';
+import { SectionModesComponent } from './main-page/section-modes/section-modes.component';
+import { ClassicLevelNumbersComponent } from './practice/numbers/classic-level-numbers/classic-level-numbers.component';
+import { LevelSelectNumberComponent } from './practice/numbers/level-select-number/level-select-number.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
 
 
 
@@ -31,10 +35,11 @@ import { SelectionModesComponent } from './main-page/selection-modes/selection-m
     SidebarComponent,
     MainPageComponent,
     TrainingComponent,
-    LevelOneComponent,
     DialogNextLevelComponent,
-    SelectionWelcomeComponent,
-    SelectionModesComponent,
+    SectionWelcomeComponent,
+    SectionModesComponent,
+    ClassicLevelNumbersComponent,
+    LevelSelectNumberComponent,
     
    
   ],
@@ -52,7 +57,10 @@ import { SelectionModesComponent } from './main-page/selection-modes/selection-m
     MatProgressBarModule,
     MatDialogModule,
     NgParticlesModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

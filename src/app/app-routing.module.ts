@@ -1,21 +1,27 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, Event, NavigationEnd, Routes, RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
-import { LevelOneComponent } from './classic_levels/level-one/level-one.component';
-
+import { ClassicLevelNumbersComponent } from './practice/numbers/classic-level-numbers/classic-level-numbers.component';
+import { LevelSelectNumberComponent } from './practice/numbers/level-select-number/level-select-number.component';
 import { MainPageComponent } from './main-page/main-page-layout/main-page.component';
 import { TrainingComponent } from './training/training.component';
+
+
 
 const routes: Routes = [
   {path: "", component: MainPageComponent},
   {path: "training", component: TrainingComponent},
-  {path: "practice/classic/level/:id", component: LevelOneComponent},
-  
+  {path: "practice/numbers/classic/level/:id", component: ClassicLevelNumbersComponent},
+  {path: "practice/numbers/select-level", component: LevelSelectNumberComponent},
 
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+}
