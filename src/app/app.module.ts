@@ -30,6 +30,9 @@ import {MatInputModule} from '@angular/material/input'
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CustomLevelNumbersComponent } from './practice/numbers/custom-level-numbers/custom-level-numbers.component';
+import { ClassicLevelLettersComponent } from './practice/letters/classic-level-letters/classic-level-letters.component';
+import { CustomLevelLettersComponent } from './practice/letters/custom-level-letters/custom-level-letters.component';
+import { LevelSelectLetterComponent } from './practice/letters/level-select-letter/level-select-letter.component';
 
 
 @NgModule({
@@ -44,6 +47,9 @@ import { CustomLevelNumbersComponent } from './practice/numbers/custom-level-num
     ClassicLevelNumbersComponent,
     LevelSelectNumberComponent,
     CustomLevelNumbersComponent,
+    ClassicLevelLettersComponent,
+    CustomLevelLettersComponent,
+    LevelSelectLetterComponent,
     
    
   ],

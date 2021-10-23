@@ -3,7 +3,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Params, Router, RouterModule, Routes } from '@angular/router';
 import { DialogNextLevelComponent } from 'src/app/dialog-next-level/dialog-next-level.component';
 import { ActivatedRoute } from '@angular/router';
-import { numberLevelsDefinition } from '../levels_data';
+import { numberLevelsDefinition } from '../../levels_data';
 
 @Component({
   selector: 'app-classic-level-numbers',
