@@ -108,13 +108,17 @@
               </mat-form-field>
   
               <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Min. number</mat-label>
-                <input matInput  type="number" required formControlName="minNumber"><span style="margin-left:-35px;"></span>
+                <mat-label>Length</mat-label>
+                <input matInput  type="number" required formControlName="length"><span style="margin-left:-35px;"></span>
               </mat-form-field>
   
               <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Max. number</mat-label>
-                <input matInput  type="number" required  formControlName="maxNumber"><span style="margin-left:-35px;"></span>
+                  <mat-label>Aa</mat-label>
+                  <mat-select formControlName="Aa" required>
+                    <mat-option value="aa"> Lowercase</mat-option>
+                    <mat-option value="Aa">Lowercase + Uppercase</mat-option>
+                  </mat-select>
+                
               </mat-form-field>
                 <br>
               <button class="button" type="submit" mat-raised-button color="primary" [disabled]="!customLevel.valid">Start</button>

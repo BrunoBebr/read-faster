@@ -1,7 +1,7 @@
 <div class="gradient-background">
     <mat-progress-bar mode="determinate"  [value]="answerStreak"></mat-progress-bar>
     
-    <a id="back-arrow" routerLink="/practice/numbers/select-level">🠔 Back to chose levels</a>
+    <a id="back-arrow" routerLink="/practice/letters/select-level"><mat-icon style="margin: auto;">arrow_back_ios_new</mat-icon></a>
     <mat-grid-list cols="1" rowHeight="2:1">
         
         <mat-grid-tile>
@@ -10,7 +10,7 @@
             
             <div class="form">
                 <form *ngIf="isVisible" (submit)="verifynum()" id="numberInputForm">
-                    <input id="inp"type="number" [(ngModel)]="inputLetter" name="number">
+                    <input id="inp"type="text" [(ngModel)]="inputLetter" name="number">
                     <p><br></p>
                 </form>
             </div>

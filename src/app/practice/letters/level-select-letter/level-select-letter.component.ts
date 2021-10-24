@@ -70,12 +70,12 @@ export class LevelSelectLetterComponent implements AfterViewInit, OnInit {
 
   customLevel = new FormGroup({
     time: new FormControl(null, Validators.required),
-    minNumber: new FormControl(null, Validators.required),
-    maxNumber: new FormControl(null, Validators.required)
+    length: new FormControl(null, Validators.required),
+    Aa: new FormControl(null, Validators.required)
   });
 
   startCustomLevel(){
     //console.log(this.customLevel.value.time)
-    this.router.navigate(['practice/letters/custom-level/' + this.customLevel.value.time +'/'+ this.customLevel.value.minNumber + '/' + this.customLevel.value.maxNumber]);
+    this.router.navigate(['practice/letters/custom-level/' + this.customLevel.value.time +'/'+ this.customLevel.value.length + '/' + this.customLevel.value.Aa]);
   }
 }

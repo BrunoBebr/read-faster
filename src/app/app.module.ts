@@ -32,6 +32,8 @@ import { CustomLevelNumbersComponent } from './practice/numbers/custom-level-num
 import { LevelSelectLetterComponent } from './practice/letters/level-select-letter/level-select-letter.component';
 import { ClassicLevelLettersComponent } from './practice/letters/classic-level-letters/classic-level-letters.component';
 import { CustomLevelLettersComponent } from './practice/letters/custom-level-letters/custom-level-letters.component';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -69,7 +71,8 @@ import { CustomLevelLettersComponent } from './practice/letters/custom-level-let
     MatSortModule,
     MatInputModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
     
   ],
   providers: [],

@@ -58,25 +58,24 @@ nextLevel(){
   
 }
 
-getRandomLetter(lenghtnum: number, Aa: string) {
- console.log("randomletter init")  ;
-  var randomstring = require("randomstring");
-  console.log("randomletter require")  ;
+getRandomLetter(length: number, Aa: string) {
 
-if (Aa == "aa") {
-  randomstring.generate({
-    lenght : lenghtnum,
-    charset: 'alphabetic',
-    lowercase: true
-    });
-}else{
-  randomstring.generate({
-    lenght : lenghtnum,
-    charset: 'alphabetic',
-    });
-}
-
-console.log("randomletter end")  ;
+  if(Aa == "aa"){
+    var randomChars = 'abcdefghijklmnopqrstuvwxyz';
+    var result = '';
+    for ( var i = 0; i < length; i++ ) {
+        result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+    }
+    return result;
+  }
+  else {
+    var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var result = '';
+    for ( var i = 0; i < length; i++ ) {
+        result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+    }
+    return result;
+  }
 
   
 }
@@ -143,7 +142,7 @@ var Aa = def.Aa;
     }
     if(this.inputLetter != this.letter){
       var text = document.getElementById('number-span');
-      text!.innerText = "Sorry, but number was " + this.letter;
+      text!.innerText = "Sorry, but letters was " + this.letter;
       this.answerStreak = 0;
       
     }
