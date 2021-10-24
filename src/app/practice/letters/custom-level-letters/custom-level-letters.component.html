@@ -1,1 +1,29 @@
-<p>custom-level-letters works!</p>
+<div class="gradient-background">
+    <mat-progress-bar mode="determinate"  [value]="answerStreak"></mat-progress-bar>
+    
+    <a id="back-arrow" routerLink="/practice/letters/select-level"><mat-icon style="margin: auto;">arrow_back_ios_new</mat-icon></a>
+    <mat-grid-list cols="1" rowHeight="2:1">
+        
+        <mat-grid-tile>
+            <div>
+            <p class="text-center"><span id="number-span"></span><br><br><span id="count"></span></p>
+            
+            <div class="form">
+                <form *ngIf="isVisible" (submit)="verifynum()" id="numberInputForm">
+                    <input id="inp"type="text" [(ngModel)]="inputLetter" name="number">
+                    <p><br></p>
+                </form>
+            </div>
+            
+             
+            <div class="buttons">     
+            <button *ngIf="start" mat-flat-button id="start-button" (click)="startCourse()" >Start</button>
+            <button *ngIf="verify"  form="numberInputForm" mat-flat-button id="end-button" (click)="verifynum()" >Verify</button>
+        </div></div>
+    
+        </mat-grid-tile>
+        
+       
+       
+      </mat-grid-list>
+    </div>

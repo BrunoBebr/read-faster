@@ -157,7 +157,7 @@ var Aa = def.Aa;
         if (result == true) {
          // console.log(this.LevelId);
           
-          this.router.navigate(['practice/numbers/classic/level',this.LevelId+1]);
+          this.router.navigate(['practice/letters/classic/level',this.LevelId+1]);
           var text = document.getElementById('number-span');
           text!.innerText = "";
           this.nextLevel()  

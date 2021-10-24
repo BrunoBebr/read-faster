@@ -8,6 +8,7 @@ import { MainPageComponent } from './main-page/main-page-layout/main-page.compon
 import { CustomLevelNumbersComponent } from './practice/numbers/custom-level-numbers/custom-level-numbers.component';
 import { ClassicLevelLettersComponent } from './practice/letters/classic-level-letters/classic-level-letters.component';
 import { LevelSelectLetterComponent } from './practice/letters/level-select-letter/level-select-letter.component';
+import { CustomLevelLettersComponent } from './practice/letters/custom-level-letters/custom-level-letters.component';
 
 const routes: Routes = [
   {path: "", component: MainPageComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: "practice/numbers/custom-level/:time/:min_num/:max_num", component: CustomLevelNumbersComponent},
   {path: "practice/letters/select-level", component: LevelSelectLetterComponent},
   {path: "practice/letters/classic/level/:id", component: ClassicLevelLettersComponent},
+  {path: "practice/letters/custom-level/:time/:length/:Aa", component: CustomLevelLettersComponent},
 ];
 
 
