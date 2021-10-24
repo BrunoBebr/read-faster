@@ -11,7 +11,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { MainPageComponent } from './main-page/main-page-layout/main-page.component';
-import { TrainingComponent } from './training/training.component';
 import { FormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
@@ -30,27 +29,24 @@ import {MatInputModule} from '@angular/material/input'
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CustomLevelNumbersComponent } from './practice/numbers/custom-level-numbers/custom-level-numbers.component';
+import { LevelSelectLetterComponent } from './practice/letters/level-select-letter/level-select-letter.component';
 import { ClassicLevelLettersComponent } from './practice/letters/classic-level-letters/classic-level-letters.component';
 import { CustomLevelLettersComponent } from './practice/letters/custom-level-letters/custom-level-letters.component';
-import { LevelSelectLetterComponent } from './practice/letters/level-select-letter/level-select-letter.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     MainPageComponent,
-    TrainingComponent,
     DialogNextLevelComponent,
     SectionWelcomeComponent,
     SectionModesComponent,
     ClassicLevelNumbersComponent,
     LevelSelectNumberComponent,
     CustomLevelNumbersComponent,
-    ClassicLevelLettersComponent,
     CustomLevelLettersComponent,
     LevelSelectLetterComponent,
-    
+    ClassicLevelLettersComponent
    
   ],
   imports: [
