@@ -5,13 +5,16 @@ import { DialogNextLevelComponent } from 'src/app/dialog-next-level/dialog-next-
 import { ActivatedRoute } from '@angular/router';
 import { letterLevelsDefinition, numberLevelsDefinition } from '../../levels_data';
 
+
 @Component({
   selector: 'app-custom-level-letters',
   templateUrl: './custom-level-letters.component.html',
   styleUrls: ['./custom-level-letters.component.scss']
 })
 export class CustomLevelLettersComponent implements OnInit {
-  public LevelId = 1; 
+  public time = 100; 
+  public length = 3;
+  public Aa = 0 ;
   start = true;
   verify = false;
   isVisible = false;
@@ -22,16 +25,16 @@ export class CustomLevelLettersComponent implements OnInit {
   constructor(public dialog: MatDialog, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    
     this.route.params
     .subscribe(
       (params: Params) => {
-        this.LevelId = +params['id'];
-        
+        this.time = +params['time'];
+        this.length = +params['length'];
+        this.Aa = +params['Aa'];
       }
       );
       var text = document.getElementById('number-span');
-      text!.innerText = "Ready for level "+ this.LevelId +" ?";
+      text!.innerText = "Ready ?";
   } 
 
   
@@ -42,24 +45,11 @@ export class CustomLevelLettersComponent implements OnInit {
     await new Promise<void>(resolve => setTimeout(()=>resolve(), ms)).then();
 }
 
-nextLevel(){
 
-  this.answerStreak = 0;
-  this.start = true;
-  this.verify = false;
-  this.isVisible = false;
 
-  this.LevelId = this.LevelId+1 
-    var text = document.getElementById('number-span');
-    text!.innerText = "Ready for level "+ this.LevelId +" ?";
-  
-  
-}
-
-getRandomLetter(length: number, Aa: string) {
-
-  if(Aa == "aa"){
-    var randomChars = 'abcdefghijklmnopqrstuvwxyz';
+getRandomLetter(length: number, Aa: number) {
+  if(Aa == 1){
+    var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     var result = '';
     for ( var i = 0; i < length; i++ ) {
         result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
@@ -67,7 +57,7 @@ getRandomLetter(length: number, Aa: string) {
     return result;
   }
   else {
-    var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var randomChars = 'abcdefghijklmnopqrstuvwxyz';
     var result = '';
     for ( var i = 0; i < length; i++ ) {
         result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
@@ -79,26 +69,11 @@ getRandomLetter(length: number, Aa: string) {
 }
 
 startCourse(){
- // console.log(this.LevelId + " = " + "LEVEL ID");
-   var meme = 1;
-var def = letterLevelsDefinition.find(x => x.id == this.LevelId);
-
-
-if(def){
-  var time = def.time ;
-var digits = def.digits;
-var Aa = def.Aa;
-}else{
-  var time = 100;
-  var digits = 3;
-  var Aa = "aa";
+ 
+  this.course(this.time, this.length, this.Aa)
 }
 
-
-  this.course(time, digits, Aa)
-}
-
- public course(time : number, digits : number, Aa : string){
+ public course(time : number, digits : number, Aa : number){
   this.start = false;
   this.isVisible = false;
  
@@ -148,27 +123,10 @@ var Aa = def.Aa;
    // this.start = true;
 
 
-    if (this.answerStreak >= 100) {
-      const dialogRef = this.dialog.open(DialogNextLevelComponent);
+    
+        
+    
 
-      dialogRef.afterClosed().subscribe(result => {
-        if (result == true) {
-         // console.log(this.LevelId);
-          
-          this.router.navigate(['practice/numbers/classic/level',this.LevelId+1]);
-          var text = document.getElementById('number-span');
-          text!.innerText = "";
-          this.nextLevel()  
-        }
-        else{ 
-          this.answerStreak = 0; 
-          var text = document.getElementById('number-span');
-          text!.innerText = "Ready ?";
-          this.start = true;
-        }
-      });
-    }
-    else {
 
         var count = document.getElementById('count');
           count!.innerText = "Continue in 3...";
@@ -182,7 +140,7 @@ var Aa = def.Aa;
         });
         });
       });
-    }
+    
   }
 
   
