@@ -9,6 +9,9 @@ import { CustomLevelNumbersComponent } from './practice/numbers/custom-level-num
 import { ClassicLevelLettersComponent } from './practice/letters/classic-level-letters/classic-level-letters.component';
 import { LevelSelectLetterComponent } from './practice/letters/level-select-letter/level-select-letter.component';
 import { CustomLevelLettersComponent } from './practice/letters/custom-level-letters/custom-level-letters.component';
+import { LevelSelectSentencesComponent } from './practice/sentences/level-select-sentences/level-select-sentences.component';
+import { ClassicLevelSentencesComponent } from './practice/sentences/classic-level-sentences/classic-level-sentences.component';
+import { CustomLevelSentencesComponent } from './practice/sentences/custom-level-sentences/custom-level-sentences.component';
 
 const routes: Routes = [
   {path: "", component: MainPageComponent},
@@ -18,6 +21,10 @@ const routes: Routes = [
   {path: "practice/letters/select-level", component: LevelSelectLetterComponent},
   {path: "practice/letters/classic/level/:id", component: ClassicLevelLettersComponent},
   {path: "practice/letters/custom-level/:time/:length/:Aa", component: CustomLevelLettersComponent},
+  {path: "practice/sentences/select-level", component: LevelSelectSentencesComponent},
+  {path: "practice/sentences/classic/level/:id", component: ClassicLevelSentencesComponent},
+  {path: "practice/sentences/custom-level/:time/:length/:Aa", component: CustomLevelSentencesComponent},
+
 ];
 
 

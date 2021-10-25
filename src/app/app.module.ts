@@ -34,6 +34,9 @@ import { ClassicLevelLettersComponent } from './practice/letters/classic-level-l
 import { CustomLevelLettersComponent } from './practice/letters/custom-level-letters/custom-level-letters.component';
 import {MatSelectModule} from '@angular/material/select';
 import { SectionInfoComponent } from './main-page/section-info/section-info.component';
+import { LevelSelectSentencesComponent } from './practice/sentences/level-select-sentences/level-select-sentences.component';
+import { ClassicLevelSentencesComponent } from './practice/sentences/classic-level-sentences/classic-level-sentences.component';
+import { CustomLevelSentencesComponent } from './practice/sentences/custom-level-sentences/custom-level-sentences.component';
 
 
 @NgModule({
@@ -50,7 +53,10 @@ import { SectionInfoComponent } from './main-page/section-info/section-info.comp
     CustomLevelLettersComponent,
     LevelSelectLetterComponent,
     ClassicLevelLettersComponent,
-    SectionInfoComponent
+    SectionInfoComponent,
+    LevelSelectSentencesComponent,
+    ClassicLevelSentencesComponent,
+    CustomLevelSentencesComponent
    
   ],
   imports: [
