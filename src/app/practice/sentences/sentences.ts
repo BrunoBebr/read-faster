@@ -1,0 +1,22 @@
+export var sentencesList = [
+    "I",
+    "My",
+    "Hi",
+    "Go",
+    "To",
+    "We",
+    "Or",
+    "Of",
+    "Is",
+    "Up",
+    "He",
+    "She",
+    "Eye",
+    "One",
+    "You",
+    "Now",
+    "For",
+    "All",
+    "Car",
+]
+    
