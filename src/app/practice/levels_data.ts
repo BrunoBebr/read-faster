@@ -334,3 +334,10 @@ export var letterLevelsDefinition = [
      },
 
     ]
+
+    export var sentencesLevelsDefinition = [
+        {    "id" :  1,
+             "time" : 200,
+             "lenght" : 3  
+         },
+        ]

@@ -9,15 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 import { Params, Router, RouterModule, Routes } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { sentencesLevelsDefinition } from '../../levels_data';
 
-export interface letterLevelsDefinition {
+export interface sentencesLevelsDefinition {
   id: number;
   time: number;
-  digits: number;
-  Aa : string;
+  lenght: number;
 }
 
-const ELEMENT_DATA = letterLevelsDefinition ;
+const ELEMENT_DATA = sentencesLevelsDefinition ;
 
 @Component({
   selector: 'app-level-select-sentences',
@@ -25,8 +25,8 @@ const ELEMENT_DATA = letterLevelsDefinition ;
   styleUrls: ['./level-select-sentences.component.scss']
 })
 export class LevelSelectSentencesComponent implements AfterViewInit, OnInit {
-  displayedColumns: string[] = ['id', 'time','Aa', 'digits'];
-  dataSource = new MatTableDataSource<letterLevelsDefinition>(ELEMENT_DATA);
+  displayedColumns: string[] = ['id', 'time','lenght'];
+  dataSource = new MatTableDataSource<sentencesLevelsDefinition>(ELEMENT_DATA);
 
   ngOnInit(){
     window.scroll(0,0);
@@ -64,18 +64,18 @@ export class LevelSelectSentencesComponent implements AfterViewInit, OnInit {
     $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
   clickedRows(level :number){
-    this.router.navigate(['practice/letters/classic/level',level]);
+    this.router.navigate(['practice/sentences/classic/level',level]);
   }
 
 
   customLevel = new FormGroup({
     time: new FormControl(null, Validators.required),
-    length: new FormControl(null, Validators.required),
-    Aa: new FormControl(null, Validators.required)
+    lenght: new FormControl(null, Validators.required),
+    
   });
 
   startCustomLevel(){
     //console.log(this.customLevel.value.time)
-    this.router.navigate(['practice/letters/custom-level/' + this.customLevel.value.time +'/'+ this.customLevel.value.length + '/' + this.customLevel.value.Aa]);
+    this.router.navigate(['practice/sentences/custom-level/' + this.customLevel.value.time +'/'+ this.customLevel.value.length]);
   }
 }

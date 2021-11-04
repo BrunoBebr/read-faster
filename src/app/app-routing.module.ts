@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: "practice/letters/custom-level/:time/:length/:Aa", component: CustomLevelLettersComponent},
   {path: "practice/sentences/select-level", component: LevelSelectSentencesComponent},
   {path: "practice/sentences/classic/level/:id", component: ClassicLevelSentencesComponent},
-  {path: "practice/sentences/custom-level/:time/:length/:Aa", component: CustomLevelSentencesComponent},
+  {path: "practice/sentences/custom-level/:time/:length", component: CustomLevelSentencesComponent},
 
 ];
 

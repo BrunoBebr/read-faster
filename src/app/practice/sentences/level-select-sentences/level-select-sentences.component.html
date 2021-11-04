@@ -62,16 +62,13 @@
             </ng-container>
           
             <!-- Name Column -->
-            <ng-container matColumnDef="digits">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by digits"> Digits </th>
-              <td mat-cell *matCellDef="let element"> {{element.digits}} </td>
+            <ng-container matColumnDef="lenght">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by length"> Lenght </th>
+              <td mat-cell *matCellDef="let element"> {{element.lenght}} </td>
             </ng-container>
           
             <!-- Weight Column -->
-            <ng-container matColumnDef="Aa">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Aa"> Aa </th>
-              <td mat-cell *matCellDef="let element"> {{element.Aa}} </td>
-            </ng-container>
+            
             <ng-container matColumnDef="time">
               <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by time"> Time (ms) </th>
               <td mat-cell *matCellDef="let element"> {{element.time}} </td>
@@ -110,17 +107,10 @@
     
                 <mat-form-field class="example-full-width" appearance="outline">
                   <mat-label>Length</mat-label>
-                  <input matInput  type="number" required formControlName="length"><span style="margin-left:-35px;"></span>
+                  <input matInput  type="number" required formControlName="lenght"><span style="margin-left:-35px;"></span>
                 </mat-form-field>
     
-                <mat-form-field class="example-full-width" appearance="outline">
-                    <mat-label>Aa</mat-label>
-                    <mat-select formControlName="Aa" required>
-                      <mat-option value="0"> Lowercase</mat-option>
-                      <mat-option value="1">Lowercase + Uppercase</mat-option>
-                    </mat-select>
-                  
-                </mat-form-field>
+                
                   <br>
                 <button class="button" type="submit" mat-raised-button color="primary" [disabled]="!customLevel.valid">Start</button>
                

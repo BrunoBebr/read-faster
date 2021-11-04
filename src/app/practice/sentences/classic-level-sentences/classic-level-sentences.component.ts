@@ -4,6 +4,7 @@ import { Params, Router, RouterModule, Routes } from '@angular/router';
 import { DialogNextLevelComponent } from 'src/app/dialog-next-level/dialog-next-level.component';
 import { ActivatedRoute } from '@angular/router';
 import { sentencesList} from '../sentences';
+import { sentencesLevelsDefinition } from '../../levels_data';
 
 @Component({
   selector: 'app-classic-level-sentences',
@@ -78,18 +79,18 @@ getRandomSentence(length : Number) {
 startCourse(){
   // console.log(this.LevelId + " = " + "LEVEL ID");
     var meme = 1;
-/* var def = letterLevelsDefinition.find(x => x.id == this.LevelId);
+var def = sentencesLevelsDefinition.find(x => x.id == this.LevelId);
  
  
  if(def){
    var time = def.time ;
- var digits = def.digits;
- var Aa = def.Aa;
- }else{*/
-   var time = 1000;
-   var digits = 2;
+ var digits = def.lenght;
+
+ }else{
+   var time = 200;
+   var digits = 3;
    
-// }
+ }
  
  
    this.course(time, digits)
@@ -152,7 +153,7 @@ startCourse(){
          if (result == true) {
           // console.log(this.LevelId);
            
-           this.router.navigate(['practice/letters/classic/level',this.LevelId+1]);
+           this.router.navigate(['practice/sentences/classic/level',this.LevelId+1]);
            var text = document.getElementById('number-span');
            text!.innerText = "";
            this.nextLevel()  
